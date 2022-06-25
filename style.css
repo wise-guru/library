@@ -12,7 +12,7 @@ body {
     grid-template-columns: 1fr 3fr;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 6fr;
     
 }
 
@@ -44,6 +44,11 @@ body {
 
 .content-container {
     display: grid;
+    grid-template-rows: 1fr 4fr
+}
+
+.title {
+    text-align: center;
 }
 
 .sidebar {
@@ -58,9 +63,25 @@ ul {
     
 }
 
-.title-container {
+.cards {
     display: grid;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, .3fr));
+    grid-template-rows: repeat(2, 1fr);
+    grid-template: 15px;
+    margin: 15px;
+    grid-row: 2;
+}
+
+.card {
+    display: grid;
+    background-color: #fff;
+    height: 200px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
 
 }
+
+
 
