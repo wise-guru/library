@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readly Library</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./toggle.scss">
+    <script src="./script.js" defer></script>
 
+</head>
+<body>
+    <div class="container">
+       
+        <div class="header">
+            <img src="./img/library-white.svg" alt="Icon of Libary boos" class="header-icon">
+            <h2 class="header-title">Readly</h2>
+        </div>
+
+        <div class="content-container">
+            <div class="sidebar">
+                <label for="name">Book name</label>
+                <input type="text" name="book-name" id="name">
+
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author">
+
+                <label for="# of pages">Pages</label>
+                <input type="number" name="pages" id="pages">
+
+                <div class="isRead">
+                    Have you read the book?
+                    <a href="#" class="toggle toggle--on"></a>
+                </div>
+
+                <button class="book-btn">New Book+</button>
+            </div>
+
+            <div class="title-container">
+                <h1 class="title">My Books</h1>
+              
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
