@@ -70,6 +70,8 @@ ul {
     grid-template: 15px;
     margin: 15px;
     grid-row: 2;
+    gap: 8px;
+    color: black;
 }
 
 .card {
@@ -79,9 +81,9 @@ ul {
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-
-
 }
+
+
 
 
 

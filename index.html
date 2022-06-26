@@ -8,7 +8,6 @@
 
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./toggle.scss">
     <script src="./script.js" defer></script>
 </head>
 <body>
@@ -24,33 +23,35 @@
         </div>
 
         <div class="sidebar">
-            <ul>
-                <li>
-                    <label for="name">Book name</label>
-                    <input type="text" name="book-name" id="name">
-                </li>
+            <form>
+                <ul>
+                    <li>
+                        <label for="name">Book name</label>
+                        <input type="text" name="book-name" id="name">
+                    </li>
 
-                <li>
-                    <label for="author">Author</label>
-                    <input type="text" name="author" id="author">
-                </li>
+                    <li>
+                        <label for="author">Author</label>
+                        <input type="text" name="author" id="author">
+                    </li>
 
-                <li>
-                    <label for="# of pages">Pages</label>
-                    <input type="number" name="pages" id="pages">
-                </li>
+                    <li>
+                        <label for="# of pages">Pages</label>
+                        <input type="number" name="pages" id="pages">
+                    </li>
 
-                <li>
-                <div class="isRead">
-                    <label for="read">Have you read the book?</label>
-                    <input type="checkbox" name="read" id="read">
-                </div>
-                </li>
-                
-                <li>
-                    <button class="book-btn">New Book+</button>
-                </li>
-            </ul>
+                    <li>
+                    <div class="isRead">
+                        <label for="read">Have you read the book?</label>
+                        <input type="checkbox" name="read" id="read">
+                    </div>
+                    </li>
+                    
+                    <li>
+                        <button class="submit-btn">New Book+</button>
+                    </li>
+                </ul>
+            </form>
         </div>
 
         <div class="content-container">
