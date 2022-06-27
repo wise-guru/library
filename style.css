@@ -108,6 +108,12 @@ input {
 
 }
 
+.book-author, .book-pages, .book-read {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+
 .card:hover {
     transform: scale(1.015);
     transition-duration: 200ms;

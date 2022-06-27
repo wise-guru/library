@@ -70,7 +70,7 @@ function showBookInfo(book) {
         if(myLibrary.read == false) {
         bookIsRead.textContent = "Unread";
         } else {
-        bookIsRead.textContent = "Have read";
+        bookIsRead.textContent = "Read";
             }
         bookIsRead.classList.add('book-read')
         newCard.appendChild(bookIsRead)
