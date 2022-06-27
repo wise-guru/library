@@ -103,6 +103,8 @@ input {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     text-align: center;
     grid-template-rows: repeat(4, 1.25fr) .75fr;
+    font-weight: bold;
+    font-size: 2rem;
 
 }
 

@@ -68,9 +68,9 @@ function showBookInfo(book) {
 
         const bookIsRead = document.createElement('div')
         if(myLibrary.read == false) {
-        bookIsRead.textContent = "Not Read";
+        bookIsRead.textContent = "Unread";
         } else {
-        bookIsRead.textContent = "Read";
+        bookIsRead.textContent = "Have read";
             }
         bookIsRead.classList.add('book-read')
         newCard.appendChild(bookIsRead)
