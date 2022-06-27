@@ -24,20 +24,20 @@
 
         <div class="sidebar">
             <form class="book-form">
-                <ul>
+                <ul class="form-list">
                     <li>
-                        <label for="name">Book name</label>
-                        <input type="text" name="book-name" id="name">
+                        <label for="name" class="block">Book name</label>
+                        <input type="text" name="book-name" id="name" class="block" required>
                     </li>
 
                     <li>
-                        <label for="author">Author</label>
-                        <input type="text" name="author" id="author">
+                        <label for="author" class="block">Author</label>
+                        <input type="text" name="author" id="author" class="block" required>
                     </li>
 
                     <li>
-                        <label for="# of pages">Pages</label>
-                        <input type="number" name="pages" id="pages">
+                        <label for="# of pages" class="block">Pages</label>
+                        <input type="number" name="pages" id="pages" class="block" required>
                     </li>
 
                     <li>
@@ -64,7 +64,7 @@
                     <div class="book-pages">Pages</div>
                     <div class="book-read">Read</div>
                     <div class="card-icons">
-                        <img class="trash" src="./img/delete-outline.png" alt="Trash can for delete icon">
+                        <img class="trash" src="./img/delete-outline.png" alt="Trash can for delete icon" title="Delete book">
                     </div>
                 </div>
                
