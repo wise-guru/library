@@ -83,6 +83,20 @@ ul {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
+.card-icons {
+    display: grid;
+    justify-content: end;
+}
+
+.trash:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+}
+
+.trash:active {
+    transform: scale(0.95);
+}
+
 
 
 

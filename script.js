@@ -3,13 +3,12 @@ let myLibrary = [];
 
 const cards = document.querySelector('.cards')
 const card = document.querySelector('.card')
-
 const submitBtn = document.querySelector('.submit-btn')
-
-const titleText = document.querySelector('#name').value
-const authorText = document.querySelector('#author').value
-const pagesText = document.querySelector('#author').value
-const readText = document.querySelector('#read').value
+const titleText = document.querySelector('#name')
+const authorText = document.querySelector('#author')
+const pagesText = document.querySelector('#pages')
+const readText = document.querySelector('#read')
+const bookForm = document.querySelector('.book-form')
 
 
 
@@ -23,7 +22,12 @@ function Book(title, author, pages, read) {
 
 function validateForm(e) {
     e.preventDefault()
-    addBookToLibrary(titleText, authorText, pagesText, readText);
+
+    if (titleText.value !== '' && authorText.value !== '' && pagesText.value > 0) {
+    addBookToLibrary(titleText.value, authorText.value, pagesText.value, readText.checked);
+    }
+
+    bookForm.reset()
 };
 
 
@@ -38,15 +42,15 @@ function addBookToLibrary(title, author, pages, read) {
 
 
 function showBookInfo() {
-    for (let i = 0; i <= myLibrary.length; i++) {
+    for (let i = 0; i < myLibrary.length; i++) {
         const newCard = document.createElement('div')
         newCard.classList.add('card')
         cards.appendChild(newCard)
 
         const bookTitle = document.createElement('div')
-        bookTitle.textContent = myLibrary[i].title;
         bookTitle.classList.add('book-title')
         newCard.appendChild(bookTitle)
+        bookTitle.textContent = myLibrary[i].title;
 
         const bookAuthor = document.createElement('div')
         bookAuthor.textContent = myLibrary[i].author;
@@ -59,11 +63,16 @@ function showBookInfo() {
         newCard.appendChild(bookPages)
 
         const bookIsRead = document.createElement('div')
-        bookIsRead.textContent = myLibrary[i].read
-        bookIsRead.classList.add('.book-read')
+        if(myLibrary[i].read == false) {
+        bookIsRead.textContent = "Not Read";
+        } else {
+        bookIsRead.textContent = "Read";
+            }
+        bookIsRead.classList.add('book-read')
         newCard.appendChild(bookIsRead)
     }
-    
+
+  
 }
 
 submitBtn.addEventListener('click', function(e) {
