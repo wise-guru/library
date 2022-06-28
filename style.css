@@ -70,7 +70,8 @@ ul {
     
 }
 
-.form-list {
+ul.form-list {
+    font-size: 1.2rem;
     gap:8px;
 }
 
