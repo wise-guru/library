@@ -67,10 +67,13 @@ function showBookInfo(book) {
         newCard.appendChild(bookPages)
 
         const bookIsRead = document.createElement('div')
-        if(myLibrary.read == false) {
+        if(book.read == false) {
         bookIsRead.textContent = "Unread";
+        newCard.style.backgroundColor = '#fecaca'
+
         } else {
         bookIsRead.textContent = "Read";
+        newCard.style.backgroundColor = '#ecfccb'
             }
         bookIsRead.classList.add('book-read')
         newCard.appendChild(bookIsRead)
