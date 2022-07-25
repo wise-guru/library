@@ -26,13 +26,23 @@ function Book(title, author, pages, read) {
 //Makes sure not to create card unless these conditions are met//
 
 function validateForm(e) {
-    e.preventDefault()
-
-    if (titleText.value !== '' && authorText.value !== '' && pagesText.value > 0) {
-    addBookToLibrary(titleText.value, authorText.value, pagesText.value, readText.checked);
-    }
-
-    bookForm.reset()
+    if (titleText.validity.valueMissing) {
+        titleText.setCustomValidity("Please enter a title!")
+        titleText.reportValidity()
+    } else  if (authorText.validity.valueMissing) {
+        authorText.setCustomValidity("Please enter an author")
+        authorText.reportValidity()
+    } else if(pagesText.validity.valueMissing) {
+        pagesText.setCustomValidity('Please enter the number of pages.')
+        pagesText.reportValidity()
+    }  
+     else { 
+        titleText.setCustomValidity('')
+        authorText.setCustomValidity('')
+        pagesText.setCustomValidity('')
+        addBookToLibrary(titleText.value, authorText.value, pagesText.value, readText.checked)
+        bookForm.reset()
+    }  
 };
 
 
