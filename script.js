@@ -12,10 +12,6 @@ const bookForm = document.querySelector('.book-form')
 const trash = document.querySelector('.trash')
 
 
-
-
-
-
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -35,13 +31,11 @@ function validateForm(e) {
     bookForm.reset()
 };
 
-
 function addBookToLibrary(title, author, pages, read) {
     let book = new Book(title, author, pages, read)
     myLibrary.push(book);
     showBookInfo(book);
 }
-
 
 
 //To create a new card with every valid submission//
@@ -50,6 +44,7 @@ function showBookInfo(book) {
         const newCard = document.createElement('div')
         newCard.classList.add('card')
         cards.appendChild(newCard)
+
 
         const bookTitle = document.createElement('div')
         bookTitle.classList.add('book-title')
@@ -98,7 +93,6 @@ function showBookInfo(book) {
             let selectedIndex = selectedBook.getAttribute("data-index")
             myLibrary.splice([selectedIndex])
             cards.removeChild(e.target.parentNode.parentNode)
-            
         }
 }
 
@@ -112,5 +106,3 @@ submitBtn.addEventListener('click', function(e) {
 
 let bookCards = document.querySelectorAll('.card')
 let bookCards_array = Array.from(bookCards)
-
-
